@@ -10,3 +10,7 @@ if (Gem.win_platform?)
   end
 end
 # /XXX
+
+magazine11 = YAML.safe_load_file('magazine11.yml', symbolize_names: true)
+magazine10 = YAML.safe_load_file('magazine10.yml', symbolize_names: true)
+magazine9 = YAML.safe_load_file('magazine9.yml', symbolize_names: true)
