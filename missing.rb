@@ -14,3 +14,22 @@ end
 magazine11 = YAML.safe_load_file('magazine11.yml', symbolize_names: true)
 magazine10 = YAML.safe_load_file('magazine10.yml', symbolize_names: true)
 magazine9 = YAML.safe_load_file('magazine9.yml', symbolize_names: true)
+
+puts 'Классы:'
+
+magazine11.each do |x|
+  classy11 = "#{x[:Classy]} "
+  print classy11
+end
+
+puts
+magazine10.each do |x|
+  classy10 = "#{x[:Classy]} "
+  print classy10
+end
+
+puts
+magazine9.each do |x|
+  classy9 = "#{x[:Classy]} "
+  print classy9
+end
