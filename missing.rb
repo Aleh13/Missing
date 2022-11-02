@@ -33,3 +33,17 @@ magazine9.each do |x|
   classy9 = "#{x[:Classy]} "
   print classy9
 end
+
+loop do
+puts
+puts
+puts 'Выберите класс'
+kl = gets.strip
+
+if kl == '9а'
+  l = 0
+elsif kl == '9б'
+  l = 1
+elsif kl == '9в'
+  l = 2
+end
