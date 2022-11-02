@@ -47,3 +47,9 @@ elsif kl == '9б'
 elsif kl == '9в'
   l = 2
 end
+
+magazine9.each do |x|
+  classy9 = "#{x[:pupils][l]}"
+  puts classy9
+end
+end
