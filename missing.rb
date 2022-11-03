@@ -11,12 +11,14 @@ if (Gem.win_platform?)
 end
 # /XXX
 
+# Считываем информацию с файла yaml, symbolize_names: true - ключ делаем сиволом
 magazine11 = YAML.safe_load_file('magazine11.yml', symbolize_names: true)
 magazine10 = YAML.safe_load_file('magazine10.yml', symbolize_names: true)
 magazine9 = YAML.safe_load_file('magazine9.yml', symbolize_names: true)
 
 puts 'Классы:'
 
+# Вывод ученических классов на экран
 magazine11.each do |x|
   classy11 = "#{x[:Classy]} "
   print classy11
@@ -34,6 +36,8 @@ magazine9.each do |x|
   print classy9
 end
 
+
+# Выбор ученического класса
 loop do
 puts
 puts
@@ -48,6 +52,7 @@ elsif kl == '9в'
   l = 2
 end
 
+# Выбор ученика из ученического класса
 magazine9.each do |x|
   classy9 = "#{x[:pupils][l]}"
   puts classy9
