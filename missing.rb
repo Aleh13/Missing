@@ -53,8 +53,8 @@ elsif kl == '9в'
 end
 
 # Выбор ученика из ученического класса
-magazine9.each do |x|
+magazine9.each_with_index do |x, i|
   classy9 = "#{x[:pupils][l]}"
-  puts classy9
+  puts "#{i+1}-#{classy9}"
 end
 end
