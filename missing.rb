@@ -16,7 +16,8 @@ magazine11 = YAML.safe_load_file('magazine11.yml', symbolize_names: true)
 magazine10 = YAML.safe_load_file('magazine10.yml', symbolize_names: true)
 magazine9 = YAML.safe_load_file('magazine9.yml', symbolize_names: true)
 
-puts magazine9.inspect
+
+
 puts 'Классы:'
 
 # Вывод ученических классов на экран
@@ -42,22 +43,49 @@ end
 #loop do
 puts
 puts
+
+
+mag9a = []
+mag9a << magazine9[0]
+
+mag9b = []
+mag9b << magazine9[1]
+
+mag9v = []
+mag9v << magazine9[2]
+
+
 puts 'Выберите класс:'
 kl = gets.strip
 
-#if kl == '9а'
-  #l = 0
-#elsif kl == '9б'
-  #l = 1
-#elsif kl == '9в'
-  #l = 2
+if kl == '9а'
+  l = mag9a
+elsif kl == '9б'
+  l = mag9b
+elsif kl == '9в'
+  l = mag9v
+end
+
+#puts mag9b
+
+
+#mag9v.each do |classy|
+ #puts classy
 #end
 
-magazine9.each do |classy|
+
+
+
+
+
+l.each do |classy|
 classy[:pupils].each_with_index do |x, i|
   classy9 = x
   puts "#{i+1}-#{classy9}"
+  #puts classy[:pupils].inspect
 end
+
+
 
 
 puts
