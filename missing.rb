@@ -76,8 +76,8 @@ puts
 puts 'Выберите ученика:'
 uch = gets.strip.to_i
   
-magazine9.each do |i|
-  uchenic9 = "#{i[:pupils][uch]}"
+l.each do |i|
+  uchenic9 = "#{i[:pupils][uch - 1]}"
   puts uchenic9
   gets
 end
