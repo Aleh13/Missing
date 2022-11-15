@@ -39,12 +39,10 @@ magazine9.each do |x|
 end
 
 
+puts
+puts
+
 # Выбор ученического класса
-#loop do
-puts
-puts
-
-
 mag9a = []
 mag9a << magazine9[0]
 
@@ -66,26 +64,12 @@ elsif kl == '9в'
   l = mag9v
 end
 
-#puts mag9b
-
-
-#mag9v.each do |classy|
- #puts classy
-#end
-
-
-
-
-
 
 l.each do |classy|
 classy[:pupils].each_with_index do |x, i|
   classy9 = x
   puts "#{i+1}-#{classy9}"
-  #puts classy[:pupils].inspect
 end
-
-
 
 
 puts
