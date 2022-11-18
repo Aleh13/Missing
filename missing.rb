@@ -77,13 +77,19 @@ prichina = ['болеет', 'справка','в лагере']
 puts
 loop do
 puts '____________________________________________'
-puts 'Выберите ученика:'
+puts 'Выберите ученика или Exit (0)'
+
 uch = gets.strip.to_i
+
+if uch == 0
+  exit
+end
+
   
 l.each do |i|
   uchenic9 = "#{i[:pupils][uch - 1]}"
   puts uchenic9
-  puts '1 - болеет, 2 - справка, 3 - в лагере'
+  puts '1 - болеет, 2 - справка, 3 - в лагере,'
   pr = gets.to_i
   puts "#{uchenic9}-#{prichina[pr - 1]}"
 
@@ -91,5 +97,4 @@ l.each do |i|
 end
 end
 end
-
 
