@@ -71,7 +71,7 @@ classy[:pupils].each_with_index do |x, i|
   puts "#{i+1}-#{classy9}"
 end
 
-
+massu = []
 prichina = ['болеет', 'справка','в лагере']
 
 puts
@@ -82,7 +82,11 @@ puts 'Выберите ученика или Exit (0)'
 uch = gets.strip.to_i
 
 if uch == 0
-  exit
+  massu.each do |i|
+    puts i
+  end
+
+    exit
 end
 
   
@@ -91,7 +95,10 @@ l.each do |i|
   puts uchenic9
   puts '1 - болеет, 2 - справка, 3 - в лагере,'
   pr = gets.to_i
-  puts "#{uchenic9}-#{prichina[pr - 1]}"
+  u = "#{uchenic9}-#{prichina[pr - 1]}"
+  puts u
+  massu << u
+  
 
 
 end
