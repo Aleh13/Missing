@@ -52,9 +52,18 @@ mag9b << magazine9[1]
 mag9v = []
 mag9v << magazine9[2]
 
+kl = nil
 
+loop do
 puts 'Выберите класс:'
 kl = gets.strip
+
+if kl.between?('9а', '9в')
+    break
+else
+  puts 'Ответ только 9а - 9в'
+end
+end
 
 if kl == '9а'
   l = mag9a
