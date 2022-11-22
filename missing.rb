@@ -86,6 +86,7 @@ prichina = ['болеет', 'справка','в лагере']
 
 puts
 uch = nil
+
 loop do
 loop do
 
@@ -108,17 +109,27 @@ if uch == 0
 end
 
 
-  
+pr = nil
+
 l.each do |i|
   uchenic9 = "#{i[:pupils][uch - 1]}"
   puts uchenic9
+
+loop do
   puts '1 - болеет, 2 - справка, 3 - в лагере,'
   pr = gets.to_i
+
+  if pr.between?(1, 3)
+    break
+  else
+  puts 'Ответ только 1 - 3'
+  end
+  end
   u = "#{uchenic9}-#{prichina[pr - 1]}"
   puts u
   massu << u
   
-#end
+
 end
 end
 end
