@@ -43,6 +43,7 @@ puts
 puts
 
 # Выбор ученического класса
+
 mag9a = []
 mag9a << magazine9[0]
 
@@ -84,19 +85,28 @@ massu = []
 prichina = ['болеет', 'справка','в лагере']
 
 puts
+uch = nil
 loop do
+loop do
+
 puts '____________________________________________'
 puts 'Выберите ученика или Exit (0)'
 
 uch = gets.strip.to_i
+if uch.between?(0, 3)
+    break
+else
+  puts 'Ответ только 1 - 3'
+end
+end
 
 if uch == 0
   massu.each do |i|
     puts i
   end
-
     exit
 end
+
 
   
 l.each do |i|
@@ -108,9 +118,9 @@ l.each do |i|
   puts u
   massu << u
   
+#end
+end
+end
+end
 
-
-end
-end
-end
 
