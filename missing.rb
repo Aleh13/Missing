@@ -81,8 +81,10 @@ classy[:pupils].each_with_index do |x, i|
   puts "#{i+1}-#{classy9}"
 end
 
+uchmass = []
 massu = []
 prichina = ['болеет', 'справка','в лагере']
+
 
 puts
 uch = nil
@@ -115,6 +117,13 @@ l.each do |i|
   uchenic9 = "#{i[:pupils][uch - 1]}"
   puts uchenic9
 
+
+if uchmass.include?(uchenic9)
+  puts 'Выберите другого ученика, этот ученик отмечен'
+  break
+end
+
+
 loop do
   puts '1 - болеет, 2 - справка, 3 - в лагере,'
   pr = gets.to_i
@@ -128,6 +137,10 @@ loop do
   u = "#{uchenic9}-#{prichina[pr - 1]}"
   puts u
   massu << u
+  
+  #puts uchmass.inspect
+
+  uchmass << uchenic9
   
 
 end
