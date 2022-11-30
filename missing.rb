@@ -1,4 +1,6 @@
+# encoding: utf-8
 require 'yaml'
+require 'pony'
 
 # XXX/ Этот код необходим только при использовании русских букв на Windows
 if (Gem.win_platform?)
@@ -83,7 +85,7 @@ end
 
 uchmass = []
 massu = []
-prichina = ['болеет', 'справка','в лагере']
+prichina = ["болеет\n", "справка\n","в лагере\n"]
 
 
 puts
@@ -106,8 +108,39 @@ end
 if uch == 0
   massu.each do |i|
     puts i
-  end
-    exit
+end
+
+my_mail = 'sch4@minsk.edu.by'
+password = 'Sch4qwer2022'
+send_to = 'q4wk13@gmail.com'
+
+body = massu
+
+
+Pony.mail(
+  charset: 'UTF-8',
+  subject: "Отсутствующие #{kl} класс", # тема письма
+  body: body, # текст письма, его тело
+  to: send_to, # кому отправить письмо
+  from: my_mail, # от кого письмо (наш обратный адрес)
+
+
+ via: :smtp,
+ via_options: {
+   address: 'smtp.yandex.ru',
+   port: '465',
+   enable_starttls_auto: true,
+   tls: true,
+   user_name: my_mail,
+   password: password,
+   authentication: :plain,
+ }
+)
+
+puts
+puts 'Сведения переданы!'
+
+    exit   
 end
 
 
@@ -134,17 +167,16 @@ loop do
   puts 'Ответ только 1 - 3'
   end
   end
+
   u = "#{uchenic9}-#{prichina[pr - 1]}"
   puts u
   massu << u
   
-  #puts uchmass.inspect
-
   uchmass << uchenic9
-  
+
+
 
 end
 end
 end
-
 
